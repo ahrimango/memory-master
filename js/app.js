@@ -121,12 +121,14 @@ function end() {
         $("#whole-wrap").html('<div class="wrap animated rubberBand">\n' +
             '        <img src="./img/Achieve.png" alt="achievement">\n' +
             '        <div class="result">\n' +
-            '            <div><span>Moves：</span><span>' + steps + '</span></div>\n' +
+            '            <div><span>步数：</span><span>' + steps + '</span></div>\n' +
+/*
             '            <div><span>Stars：</span><span>' + stars + '</span></div>\n' +
-            '            <div><span>Time：</span><span>' + time + '</span></div>\n' +
+*/
+            '            <div><span>用时：</span><span>' + time + '</span></div>\n' +
             '            <a href="../index.html"></a>\n' +
             '        </div>\n' +
-            '        <input type="text" class="nickname" placeholder="输入老铁的昵称">\n' +
+            '        <input type="text" class="nickname" placeholder="输入昵称">\n' +
             '        <div class="rank">\n' +
             '            <p>快快分享上榜单</p>\n' +
             '        </div>\n' +
