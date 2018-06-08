@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Matching Game</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="animate.css/animate.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+<body>
+<div id="whole-wrap">
+    <div class="container">
+            <header>
+                <h1>记忆大师</h1>
+                <div id="help">
+                    <i class="fa fa-question-circle-o"></i>
+                </div>
+                <div class="set">
+                    <input type="button" class="time-text" value="00 : 00" readonly>
+                    <a class="rank-list" style="cursor: pointer;">排行榜</a>
+                </div>
+            </header>
+            <section class="score-panel">
+                <ul class="stars">
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                </ul>
+
+                <span class="moves">0</span> Moves
+
+                <div class="restart">
+                    <i class="fa fa-repeat"></i>
+                </div>
+
+            </section>
+
+            <ul class="deck">
+                <li class="card animated"></li>
+                <li class="card animated"></li>
+                <li class="card animated"></li>
+                <li class="card animated"></li>
+                <li class="card animated"></li>
+                <li class="card animated"></li>
+                <li class="card animated"></li>
+                <li class="card animated"></li>
+                <li class="card animated"></li>
+                <li class="card animated"></li>
+                <li class="card animated"></li>
+                <li class="card animated"></li>
+                <li class="card animated"></li>
+                <li class="card animated"></li>
+                <li class="card animated"></li>
+                <li class="card animated"></li>
+            </ul>
+    </div>
+    <div class="introduce">
+        <div class="return"></div>
+    </div>
+</div>
+<div class="layer"><i class="icon-spinner icon-spin"></i></div>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/nebulas.js"></script>
+<script src="js/neb.min.js"></script>
+<script src="js/nebPay.min.js"></script>
+<script src="js/share.js"></script>
+<script src="js/app.js"></script>
+<script>
+
+    //to check if the extension is installed
+    //if the extension is installed, var "webExtensionWallet" will be injected in to web page
+    if(typeof(webExtensionWallet) === "undefined"){
+        //alert ("Extension wallet is not installed, please install it first.")
+        console.log("webExtensionWallet is undefined ");
+    }else{
+        console.log("webExtensionWallet is ok! ");
+    }
+</script>
+</body>
+</html>

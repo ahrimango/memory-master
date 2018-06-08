@@ -1,0 +1,339 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+    font-family: 'Coda', cursive;
+}
+
+p {
+    margin: 0;
+}
+
+.container {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header{
+    width: 350px;
+    position: relative;
+}
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: 30px;
+}
+.set{
+    position: relative;
+    height: 40px;
+}
+
+#help{
+    position: absolute;
+    top:-10px;
+    right: 19px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+header input,header a{
+    position: absolute;
+    top: 0px;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #A5E24D;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+}
+
+header input{
+    left: 0px;
+    font-size: 20px;
+}
+
+header a{
+    display: inline-block;
+    color: rgb(0,0,0);
+    text-decoration: none;
+    font-size: 18px;
+    right: 0;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+    width: 350px;
+    min-height: 350px;
+    background: linear-gradient(160deg, #F7F0C9 0%,#F8E8B0 50%, #A5E24D 100%);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+}
+
+.deck .card {
+    height: 70px;
+    width: 70px;
+    background: #2e3d49;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.deck .card.open {
+    transform: rotateY(0deg);
+    background: #02b3e4;
+    cursor: default;
+}
+
+.deck .card.show {
+    font-size: 33px;
+}
+
+.deck .card.match {
+    cursor: default;
+    background: #02ccba;
+    font-size: 33px;
+}
+
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel {
+    text-align: left;
+    width: 310px;
+    margin-bottom: 10px;
+}
+
+.score-panel .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+}
+
+.score-panel .restart {
+    float: right;
+    cursor: pointer;
+}
+
+.wrap{
+    font-family:'Cooper Black';
+    font-size: 22px;
+    color: #449d44;
+    width: 350px;
+    background: url("../img/gameover.png") no-repeat center 0;
+    height: 530px;
+    margin: 30px auto;
+    position: relative;
+}
+
+img{
+    position: absolute;
+    top:68px;
+    left: 142px;
+}
+.result{
+    width: 200px;
+    min-height:100px;
+    position: absolute;
+    top:135px;
+    left: 50px;
+}
+.result span:first-child{
+    display: inline-block;
+    width: 120px;
+    text-align: right;
+}
+.rank{
+    cursor: pointer;
+    position: absolute;
+    width: 240px;
+    height: 155px;
+    left: 54px;
+    top:290px;
+    background:url("../img/share.png") no-repeat;
+    text-align: center;
+    line-height: 49px;
+    font-family:'华文琥珀' ;
+    color: #fff;
+}
+.home{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 50px;
+    top: 350px;
+}
+.home li{
+    list-style: none;
+    float: left;
+    width: 60px;
+    height: 58px;
+}
+li>a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+li.m-btn{
+    background: url("../img/Menubtn.png") no-repeat;
+    margin-right: 35px;
+}
+li.r-btn{
+    background: url("../img/Reloadbtn.png") no-repeat;
+    margin-left: 30px;
+}
+
+.introduce {
+    display: none;
+    width: 350px;
+    height: 480px;
+    margin: 40px auto;
+    background: url("../img/instroduce.png") no-repeat;
+    position: relative;
+}
+.return {
+    cursor: pointer;
+    width: 69px;
+    height: 69px;
+    background: url("../img/Backbtn.png") no-repeat;
+    position: absolute;
+    left: 30px;
+    bottom: 50px;
+}
+
+.wrap input {
+    position: absolute;
+    top:240px;
+    left: 60px;
+    border: 2px solid #5073cb;
+    width: 226px;
+    height: 36px;
+    padding-left: 20px;
+    border-radius: 20px;
+    outline: none;
+}
+
+
+.rank-page{
+    height: 396px;
+    width: 350px;
+    background: url("../img/rankpage.png") no-repeat;
+    margin: 40px auto;
+    padding-top: 50px;
+    position: relative;
+}
+table{
+    width: 260px;
+    margin: 0 auto;
+    border:6px solid #b88e66;
+    border-radius: 10px;
+    border-collapse: collapse;
+    font-size: 14px;
+    overflow: scroll;
+}
+table>tbody>tr:nth-child(odd) {
+    background-color: #e5c89c;
+}
+tr{
+    height: 28px;
+}
+td{
+    text-align: center;
+    border: none;
+    padding: 0;
+
+}
+td:first-child{
+    width: 50px;
+}
+
+td:last-child{
+    width: 60px;
+}
+.bg{
+    background: url("../img/Star.png") no-repeat 1px 5px;
+}
+.again{
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #C38C53;
+    position: absolute;
+    top: 345px;
+    left: 110px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+    font-size: 18px;
+    display: block;
+    text-decoration: none;
+    color: rgb(0,0,0);
+}
+
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:rgba(72,103,182,0.4);
+    width:100%;  /*宽度设置为100%，这样才能使隐藏背景层覆盖原页面*/
+    height:100%;
+    filter:alpha(opacity=60);  /*设置透明度为60%*/
+    opacity:0.6;  /*非IE浏览器下设置透明度为60%*/
+    z-Index:999;
+    font-size: 120px;
+    text-align: center;
+    padding-top: 32%;
+    display: none;
+}
+
+.layer i {
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin-left:auto ;
+    margin-right: auto;
+}
+
